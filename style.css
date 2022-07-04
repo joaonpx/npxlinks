@@ -5,7 +5,7 @@
 }
 
 :root {
-  --hue: 258; /* 228 */
+  --hue: 228; /* 228 - 258 */
   --blue: hsla(var(--hue), 81%, 59%);
   --blue-hover: hsla(calc(var(--hue) + 2), 57%, 50%);
   --blue-dark: hsla(calc(var(--hue) + 2), 100%, 9%);
@@ -17,8 +17,20 @@
 }
 
 body {
-  background: hsla(223, 100%, 96%);
   font-family: 'Roboto', sans-serif;
+  background: hsla(calc(var(--hue) + 35), 100%, 96%);
+}
+
+@keyframes background {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 75%;
+  }
+  100% {
+    background-position: 25% 100%;
+  }
 }
 
 .container {
