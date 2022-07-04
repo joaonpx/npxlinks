@@ -11,7 +11,7 @@
   --blue-dark: hsla(calc(var(--hue) + 2), 100%, 9%);
   --blue-light: hsla(calc(var(--hue) + 2), 100%, 9%, 0.8);
   --blue-extra-light: hsla(calc(var(--hue) + 2), 100%, 9%, 0.6);
-  --background: hsla(calc(var(--hue) + 35), 100%, 96%);
+  --background: hsla(calc(var(--hue) - 5), 100%, 96%);
   --light: hsla(0, 0%, 100%);
 
   font-size: 62.5%; /* 10px = 1rem */
