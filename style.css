@@ -5,8 +5,9 @@
 }
 
 :root {
-  --hue: 258; /* 228 - 258 */
-  --blue: hsla(var(--hue), 81%, 59%);
+  --hue: 180; /* 228 - 258 - 180 */
+  --blue: hsla(var(--hue), 60%, 59%);
+  --blue-loading: hsla(var(--hue), 81%, 59%, 0.4);
   --blue-hover: hsla(calc(var(--hue) + 2), 57%, 50%);
   --blue-dark: hsla(calc(var(--hue) + 2), 100%, 9%);
   --blue-light: hsla(calc(var(--hue) + 2), 100%, 9%, 0.8);
@@ -18,8 +19,31 @@
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-family: 'Roboto', sans-serif;
-  background: var(--background);
+
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-size: 200% 200%;
+
+  animation: background 5s infinite alternate;
+}
+
+@keyframes background {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 75%;
+  }
+  100% {
+    background-position: 25% 100%;
+  }
 }
 
 .container {
@@ -28,22 +52,79 @@ body {
   align-items: center;
   flex-direction: column;
 
-  margin-top: 6rem;
+  background: var(--background);
+
+  width: 40rem;
+  height: 65rem;
+
+  border-radius: 6rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+
+  /* margin-top: 6rem; */
+
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
 }
 
-img {
-  padding: 0.4rem;
-  width: 10rem;
-  border: 0.4rem solid var(--blue);
+.container:before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 200rem var(--blue-loading);
+  filter: blur(1rem);
+  margin: -5rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 11rem;
+  height: 11rem;
+  border: 0.4rem solid var(--blue-loading);
+  border-top-color: var(--blue);
+
   border-radius: 10rem;
 
-  margin-bottom: 1.4rem;
+  animation: spin 2s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+  /* to {
+    transform: rotate(360deg);
+  } */
+}
+
+.avatar {
+  padding: 0.4rem;
+  width: 10rem;
+  border-radius: 10rem;
+
+  position: absolute;
+  top: 4.7rem;
 }
 
 h1 {
   color: var(--blue-dark);
   font-size: 3.2rem;
 
+  margin-top: 1.4rem;
   margin-bottom: 0.8rem;
 }
 
@@ -67,7 +148,10 @@ ul {
   border: none;
   border-radius: 0.6rem;
 
-  padding: 1.6rem 8rem;
+  width: 30rem;
+  height: 5.3rem;
+
+  /* padding: 1.6rem 9rem; */
   margin-bottom: 1.6rem;
 
   color: var(--light);
@@ -85,6 +169,11 @@ ul {
 
 .button:hover {
   background-color: var(--blue-hover);
+}
+
+.icon {
+  color: var(--light);
+  padding-right: 1.5rem;
 }
 
 footer {
