@@ -19,7 +19,7 @@ Rocket Links é um projeto para compartilhar diversos links em um único link.
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/community/file/1102912263666619803). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+Você pode visualizar o layout do projeto através [desse link](https://efficient-sloth-d85.notion.site/Maratona-Explorer-2-0-7ed52d87338e472e9fc7c25180ca933f). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ---
 
