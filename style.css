@@ -112,11 +112,14 @@ h1 {
 }
 
 p {
+  margin-bottom: 4.8rem;
+}
+
+p a {
+  text-decoration: none;
   color: var(--blue-light);
   font-family: 'Roboto Mono', monospace;
   font-size: 1.8rem;
-
-  margin-bottom: 4.8rem;
 }
 
 ul {
