@@ -56,22 +56,9 @@ body {
   box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.2);
 
   /* margin-top: 6rem; */
-
-  position: relative;
-  z-index: 1;
-  /* background: inherit; */
-  overflow: hidden;
 }
 
 .container:before {
-  content: '';
-  position: absolute;
-  background: inherit;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   /* box-shadow: inset 0 0 15rem var(--blue-loading); */
   filter: blur(1rem);
 }
