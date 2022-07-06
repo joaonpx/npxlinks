@@ -1,9 +1,9 @@
 <h1 align="center">
-  🔗 <b>Rocket Links</b>
+  🔗 <b>Npx Links</b>
 </h1>
 
 <p align="center">
-  <img alt="Rocket Links" src="./assets/preview.png" width="100%">
+  <img alt="Npx Links" src="./assets/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -15,11 +15,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Rocket Links é um projeto para compartilhar diversos links em um único link.
+Npx Links é um site para compartilhar diversos links em um único link.
 
 Você pode visualizar o projeto em funcionamento através do link abaixo:
 
-- **[Rocket Links](https://npx08.github.io/maratona-explorer-2.0/)**
+- **[Npx Links](https://npxlinks.vercel.app/)**
 
 ## 🔖 Layout
 
