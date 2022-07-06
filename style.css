@@ -82,7 +82,7 @@ body {
   margin: -5rem;
 }
 
-.loading {
+/* .loading {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,16 +108,18 @@ body {
 
   /* to {
     transform: rotate(360deg);
-  } */
-}
+  } 
+} */
 
 .avatar {
   padding: 0.4rem;
   width: 10rem;
   border-radius: 10rem;
 
-  position: absolute;
-  top: 4.2rem;
+  border: 0.4rem solid var(--blue);
+
+  /* position: absolute;
+  top: 4.2rem; */
 }
 
 h1 {
