@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img alt="Npx Links" src="./assets/preview.png" width="100%" style="border-radius:50%">
+  <img alt="Npx Links" src="./assets/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
