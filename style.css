@@ -5,13 +5,13 @@
 }
 
 :root {
-  --hue: 230; /* 228 - 258 - 180 */
-  --blue: hsla(var(--hue), 80%, 59%);
+  --hue: 230; /* 228 - 258 - 180*/
+  --blue: hsla(var(--hue), 90%, 59%);
   --blue-loading: hsla(var(--hue), 81%, 59%, 0.4);
   --blue-hover: hsla(calc(var(--hue) + 2), 67%, 50%);
-  --blue-dark: hsla(calc(var(--hue) + 2), 100%, 70%);
-  --blue-light: hsla(calc(var(--hue) + 2), 100%, 70%, 0.8);
-  --blue-extra-light: hsla(calc(var(--hue) + 2), 100%, 70%, 0.6);
+  --blue-dark: hsla(calc(var(--hue) + 2), 100%, 69%);
+  --blue-light: hsla(calc(var(--hue) + 2), 100%, 69%, 0.8);
+  --blue-extra-light: hsla(calc(var(--hue) + 2), 100%, 69%, 0.6);
   --background: hsla(calc(var(--hue) - 5), 100%, 96%);
   --light: hsla(0, 0%, 100%);
 
