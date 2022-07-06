@@ -150,11 +150,13 @@ ul {
   justify-content: center;
 
   text-decoration: none;
-  transition: background 200ms;
+  transition: all 200ms;
 }
 
 .button:hover {
   background-color: var(--blue-hover);
+
+  transform: scale(1.1);
 }
 
 .icon {
