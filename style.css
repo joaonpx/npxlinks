@@ -1,3 +1,5 @@
+/* =============== geral ============================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +14,10 @@
   --blue-dark: hsla(calc(var(--hue) + 2), 100%, 69%);
   --blue-light: hsla(calc(var(--hue) + 2), 100%, 69%, 0.8);
   --blue-extra-light: hsla(calc(var(--hue) + 2), 100%, 69%, 0.6);
-  --background: hsla(calc(var(--hue) - 5), 100%, 96%);
+  --bg: hsla(calc(var(--hue) - 5), 100%, 96%);
   --light: hsla(0, 0%, 100%);
+  --light-disabled: hsla(0, 0%, 100%, 0.5);
+  --bg-alert: hsl(342.7, 100%, 36.7%);
 
   font-size: 62.5%; /* 10px = 1rem */
 }
@@ -50,7 +54,7 @@ body {
   flex-direction: column;
 
   width: 40rem;
-  height: 65rem;
+  height: 72rem;
 
   border-radius: 6rem;
   box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.2);
@@ -98,9 +102,6 @@ body {
   border-radius: 10rem;
 
   border: 0.4rem solid var(--blue);
-
-  /* position: absolute;
-  top: 4.2rem; */
 }
 
 h1 {
@@ -164,6 +165,66 @@ ul {
   padding-right: 1.5rem;
 }
 
+.button-disabled {
+  background: var(--blue-hover);
+
+  border: none;
+  border-radius: 0.6rem;
+
+  width: 30rem;
+  height: 5.3rem;
+
+  /* padding: 1.6rem 9rem; */
+  margin-bottom: 1.6rem;
+
+  color: var(--light-disabled);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  transition: all 200ms;
+
+  cursor: default;
+}
+
+.button-disabled svg {
+  margin-right: 1.5rem;
+}
+
+.button-disabled svg[stroke='hsla(0, 0%, 100%)'] {
+  stroke: var(--light-disabled);
+}
+
+.coming-soon {
+  position: relative;
+  overflow: hidden;
+}
+
+.coming-soon::after {
+  content: 'Em Breve';
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 7rem;
+  height: 3rem;
+  position: absolute;
+  right: -3rem;
+  top: 0.8rem;
+  padding: 0 2.5rem 0;
+  transform: rotate(45deg);
+
+  background: var(--bg-alert);
+  color: var(--light);
+  font-size: 1rem;
+}
+
 footer {
   font-weight: 500;
   font-size: 1.2rem;
@@ -179,7 +240,7 @@ footer span {
   color: black;
 }
 
-/* =========================== ANIMATIONS ================================== */
+/* =============== animações ============================= */
 .slide-in-blurred-top {
   -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.23, 1, 0.32, 1)
     both;
@@ -238,6 +299,12 @@ footer span {
     opacity: 1;
   }
 }
+
+/**
+ * ----------------------------------------
+ * animation background
+ * ----------------------------------------
+ */
 
 @keyframes background {
   0% {
