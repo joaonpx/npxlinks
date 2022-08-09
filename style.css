@@ -225,6 +225,31 @@ ul {
   font-size: 1rem;
 }
 
+.new-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.new-item::after {
+  content: 'Novo';
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 7rem;
+  height: 3rem;
+  position: absolute;
+  right: -3rem;
+  top: 0.8rem;
+  padding: 0 2.5rem 0;
+  transform: rotate(45deg);
+
+  background: var(--bg-alert);
+  color: var(--light);
+  font-size: 1rem;
+}
+
 footer {
   font-weight: 500;
   font-size: 1.2rem;
