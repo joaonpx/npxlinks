@@ -7,7 +7,7 @@
 }
 
 :root {
-  --hue: 230; /* 228 - 258 - 180*/
+  --hue: 200; /* 228 - 258 - 180*/
   --blue: hsla(var(--hue), 90%, 59%);
   --blue-loading: hsla(var(--hue), 81%, 59%, 0.4);
   --blue-hover: hsla(calc(var(--hue) + 2), 67%, 50%);
@@ -17,7 +17,7 @@
   --bg: hsla(calc(var(--hue) - 5), 100%, 96%);
   --light: hsla(0, 0%, 100%);
   --light-disabled: hsla(0, 0%, 100%, 0.5);
-  --bg-alert: hsl(342.7, 100%, 36.7%);
+  --bg-alert: linear-gradient(to right, #059ed2, #4c7b85, #c8404a, #fa532a);
 
   font-size: 62.5%; /* 10px = 1rem */
 }
@@ -32,15 +32,7 @@ body {
 
   font-family: 'Roboto', sans-serif;
 
-  background: linear-gradient(129.96deg, #ff2f2f 10.43%, #000460 92.78%),
-    radial-gradient(100% 246.94% at 100% 0%, #ffffff 0%, #020063 100%),
-    linear-gradient(121.18deg, #1400ff 0.45%, #3a0000 100%),
-    linear-gradient(154.03deg, #ff002e 0%, #ff003d 74.04%),
-    linear-gradient(341.1deg, #b25bba 7.52%, #1700a7 77.98%),
-    linear-gradient(222.34deg, #0047ff 12.99%, #ff0000 87.21%),
-    linear-gradient(150.76deg, #b7d500 15.35%, #2200aa 89.57%);
-  background-blend-mode: overlay, color-burn, screen, overlay, difference,
-    difference, normal;
+  background: linear-gradient(130deg, #059ed2, #4c7b85, #c8404a, #fa532a);
 
   background-size: 180% 180%;
 
@@ -53,8 +45,8 @@ body {
   align-items: center;
   flex-direction: column;
 
-  width: 40rem;
-  height: 72rem;
+  width: 46rem;
+  height: 78rem;
 
   border-radius: 6rem;
   box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.2);
