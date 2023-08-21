@@ -7,14 +7,14 @@
 }
 
 :root {
-  --hue: 200; /* 228 - 258 - 180*/
-  --blue: hsla(var(--hue), 90%, 59%);
-  --blue-loading: hsla(var(--hue), 81%, 59%, 0.4);
-  --blue-hover: hsla(calc(var(--hue) + 2), 67%, 50%);
+  --hue: 100; /* 228 - 258 - 180*/
+  --blue: hsla(var(--hue), 90%, 69%);
+  --blue-loading: hsla(var(--hue), 81%, 69%, 0.4);
+  --blue-hover: hsla(calc(var(--hue) + 2), 67%, 70%);
   --blue-dark: hsla(calc(var(--hue) + 2), 100%, 69%);
   --blue-light: hsla(calc(var(--hue) + 2), 100%, 69%, 0.8);
-  --blue-extra-light: hsla(calc(var(--hue) + 2), 100%, 69%, 0.6);
-  --bg: hsla(calc(var(--hue) - 5), 100%, 96%);
+  --blue-extra-light: hsla(calc(var(--hue) + 2), 100%, 70%, 0.6);
+  --bg: hsl(calc(var(--hue) - 5), 100%, 96%);
   --light: hsla(0, 0%, 100%);
   --light-disabled: hsla(0, 0%, 100%, 0.5);
   --bg-alert: linear-gradient(to right, #059ed2, #4c7b85, #c8404a, #fa532a);
@@ -30,13 +30,15 @@ body {
   justify-content: center;
   align-items: center;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
-  background: linear-gradient(130deg, #059ed2, #4c7b85, #c8404a, #fa532a);
+  background: #0c0c0c;
 
   background-size: 180% 180%;
 
   animation: background 5s infinite alternate;
+
+  margin-block: 4rem;
 }
 
 .container {
@@ -45,11 +47,11 @@ body {
   align-items: center;
   flex-direction: column;
 
-  width: 46rem;
+  /* width: 46rem;
   height: 78rem;
 
   border-radius: 6rem;
-  box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.2); */
 
   /* margin-top: 6rem; */
 }
@@ -111,7 +113,7 @@ p {
 p a {
   text-decoration: none;
   color: var(--blue-light);
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 1.8rem;
 }
 
@@ -133,7 +135,7 @@ ul {
   /* padding: 1.6rem 9rem; */
   margin-bottom: 1.6rem;
 
-  color: var(--light);
+  color: #0c0c0c;
   font-size: 1.4rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -150,6 +152,10 @@ ul {
   background-color: var(--blue-hover);
 
   transform: scale(1.1);
+}
+
+.button svg {
+  margin-right: 1.5rem;
 }
 
 .icon {
@@ -188,7 +194,7 @@ ul {
   margin-right: 1.5rem;
 }
 
-.button-disabled svg[stroke='hsla(0, 0%, 100%)'] {
+.button-disabled svg[stroke="hsla(0, 0%, 100%)"] {
   stroke: var(--light-disabled);
 }
 
@@ -198,7 +204,7 @@ ul {
 }
 
 .coming-soon::after {
-  content: 'Em Breve';
+  content: "Em Breve";
 
   display: flex;
   justify-content: center;
@@ -223,7 +229,7 @@ ul {
 }
 
 .new-item::after {
-  content: 'Novo';
+  content: "Novo";
 
   display: flex;
   justify-content: center;
@@ -332,5 +338,11 @@ footer span {
   }
   100% {
     background-position: 25% 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    margin: 0;
   }
 }
